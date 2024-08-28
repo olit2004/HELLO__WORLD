@@ -5,17 +5,17 @@ class Solution(object):
         :type t: str
         :rtype: bool
         """
-        sl=[]
-        for i in s:
-            if  i!="#":
-                sl.append(i)
-            elif sl:
-                sl.pop()
-        tl=[] 
-        for i in t:
-            if  i!="#":
-                tl.append(i)
-            elif tl:
-                tl.pop()  
-        return sl==tl        
+        def remover (st):
+            stk=[]
+            for i in st:
+                if  i!="#":
+                    stk.append(i)
+                elif stk:
+                    stk.pop()
+            return stk
+        sl=remover(s)
+        tl= remover(t)
+        return  sl==tl
+        
+            
             
