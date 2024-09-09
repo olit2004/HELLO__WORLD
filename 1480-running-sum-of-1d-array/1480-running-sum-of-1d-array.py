@@ -5,10 +5,11 @@ class Solution(object):
         :rtype: List[int]
         """
         rsum=[]
+       
+        sm=0
         for i in range (len(nums)):
-            sm=0
-            for j in range(i+1):
-                sm+=nums[j]
+            
+            sm+=nums[i]
             rsum.append(sm)   
                 
         return rsum   
